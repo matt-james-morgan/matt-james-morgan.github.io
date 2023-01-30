@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Aboreto', serif;
+}
+body{
+    display: flex;
+    background-color: white;
+}
+
+.sidebar{
+     position: absolute;
+     min-height: 100vh;
+     max-width: 5%;
+     background-color: #5463FF;
+     justify-content:center;
+     transition: all 1s linear;
+     -webkit-transition: all 0.5s linear;
+ }
+ .sidebar .menu-title:hover{
+    color: #FFC300;
+ }
+
+.menu-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    font-size: 2rem;
+    color: white;
+    left:0;
+    transition: left 0.5s linear; 
+}
+.menu{
+    position: relative;
+    left: -300px;
+    transition: all 0.5s linear;
+}
+.menu button{
+    color:#FFC300;
+    transform: rotate(45deg);
+    background-color: transparent;
+    font-size: 5rem;
+    border: none;
+    left: 70%;
+    position: relative;
+    border-radius: 50%;
+    
+}
+.menu button:hover{
+   color:#FF1818;
+   font-weight: bolder;
+}
+.menu ul li{
+    list-style: none;
+    color: white;
+    font-size: 3rem;
+    padding: 2rem 0rem;
+    transition: 0.2s linear;
+    font-weight: bolder;
+    left: -30%;
+}
+.menu ul li:hover{
+    color: #FFC300;
+}
+.menu.active{ 
+    display: flex;
+    min-height: 100vh;
+    max-width: 25%;
+    background-color: #5463FF;
+    padding: 2rem 1rem;
+    justify-content:center;
+    
+}
+
