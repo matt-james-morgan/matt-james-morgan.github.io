@@ -12,13 +12,11 @@ body{
 }
 
 .sidebar{
-     position: absolute;
+     position: relative;
      min-height: 100vh;
-     max-width: 5%;
+     width: 8%;
      background-color: #5463FF;
-     justify-content:center;
-     transition: all 1s linear;
-     -webkit-transition: all 0.5s linear;
+     transition: width 0.5s linear;
  }
  .sidebar .menu-title:hover{
     color: #FFC300;
@@ -26,17 +24,26 @@ body{
 
 .menu-title{
     display: flex;
+    position: absolute;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     height: 100vh;
     font-size: 2rem;
     color: white;
-    left:0;
-    transition: left 0.5s linear; 
+    left:25%;
+    transition: all 0.5s linear; 
 }
+
+.menu-title h2{
+    top:50%;
+    
+
+   
+}
+
 .menu{
-    position: relative;
+    position: absolute;
     left: -300px;
     transition: all 0.5s linear;
 }
@@ -59,21 +66,12 @@ body{
     list-style: none;
     color: white;
     font-size: 3rem;
-    padding: 2rem 0rem;
+    padding: 2rem 1rem;
     transition: 0.2s linear;
     font-weight: bolder;
     left: -30%;
 }
 .menu ul li:hover{
     color: #FFC300;
-}
-.menu.active{ 
-    display: flex;
-    min-height: 100vh;
-    max-width: 25%;
-    background-color: #5463FF;
-    padding: 2rem 1rem;
-    justify-content:center;
-    
 }
 
