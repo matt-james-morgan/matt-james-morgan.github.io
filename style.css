@@ -37,9 +37,6 @@ body{
 
 .menu-title h2{
     top:50%;
-    
-
-   
 }
 
 .menu{
@@ -73,5 +70,25 @@ body{
 }
 .menu ul li:hover{
     color: #FFC300;
+}
+.ham-menu{
+    display: none;
+}
+@media only screen and (max-width: 1082px){
+    .menu-title{
+        display:none;
+    }
+    .sidebar{
+        background-color: transparent;
+    }
+    .ham-menu{
+        display: flex;
+        background-color: #5463FF;
+        border-radius: 100%;
+    }
+    .ham-menu span{
+        height: 0.1rem;
+        width: 0.3rem;
+    }
 }
 
