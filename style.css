@@ -55,6 +55,9 @@ body{
     border-radius: 50%;
     
 }
+#menu-button-ham{
+    display: none;
+}
 .menu button:hover{
    color:#FF1818;
    font-weight: bolder;
@@ -79,7 +82,7 @@ body{
         display:none;
     }
     .sidebar{
-        background-color: transparent;
+       left: -30%;
     }
     .ham-menu{
         display: flex;
@@ -91,8 +94,8 @@ body{
         height: 4rem;
         width: 4rem;
         position: relative;
-        top: 5%;
-        left: 10%;
+        margin-top: 5%;
+        left: -5%;
     }
     .ham-menu span{
         display: block;
@@ -103,6 +106,12 @@ body{
         background: #FFC300 ;
         border-radius: 3px; 
     }
+    #menu-button-ham{
+        display: block;
+    }
+    #menu-button{
+        display: none;
+    }
     
-}
 
+}
