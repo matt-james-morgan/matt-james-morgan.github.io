@@ -15,7 +15,7 @@ body{
      position: relative;
      min-height: 100vh;
      width: 8%;
-     background-color: #5463FF;
+   
      transition: width 0.5s linear;
  }
  .sidebar .menu-title:hover{
@@ -31,8 +31,9 @@ body{
     height: 100vh;
     font-size: 2rem;
     color: white;
-    left:25%;
-    transition: all 0.5s linear; 
+    width: 100%;
+    background-color: #5463FF;
+    transition: all 0.4s linear;
 }
 
 .menu-title h2{
@@ -42,7 +43,9 @@ body{
 .menu{
     position: absolute;
     left: -300px;
-    transition: all 0.5s linear;
+    transition: all 0.8s linear;
+    height: 100vh;
+    background-color: #5463FF;
 }
 .menu button{
     color:#FFC300;
@@ -82,7 +85,8 @@ body{
         display:none;
     }
     .sidebar{
-       left: -30%;
+       background-color: transparent;
+      
     }
     .ham-menu{
         display: flex;
@@ -96,6 +100,7 @@ body{
         position: relative;
         margin-top: 5%;
         left: -5%;
+        transition: all 0.5s linear;
     }
     .ham-menu span{
         display: block;
@@ -108,6 +113,7 @@ body{
     }
     #menu-button-ham{
         display: block;
+        transition:all 0.5s linear;
     }
     #menu-button{
         display: none;
