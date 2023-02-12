@@ -10,13 +10,11 @@ body{
     display: flex;
     background-color: white;
 }
-
+/*sidebar menu stlying*/
 .sidebar{
      position: relative;
      min-height: 100vh;
      width: 8%;
-   
-     transition: width 0.5s linear;
  }
  .sidebar .menu-title:hover{
     color: #FFC300;
@@ -33,7 +31,7 @@ body{
     color: white;
     width: 100%;
     background-color: #5463FF;
-    transition: all 0.4s linear;
+    transition: all 0.8s linear;
 }
 
 .menu-title h2{
@@ -118,6 +116,42 @@ body{
     #menu-button{
         display: none;
     }
-    
-
 }
+    
+    /*title styling*/
+header span{
+        font-size: 15rem;
+        display: flex;
+}
+span:hover{
+    animation-name: rubberband;
+    animation : rubberband 800ms alternate ease-out;
+}
+    .bouncing{
+       
+    }
+
+    @keyframes rubberband{
+        0%{
+            transform: scaleX(1);
+        }
+        40%{
+            transform: scaleX(1.12) scaleY(0.75);
+        }
+        55%{
+            transform: scaleX(0.85) scaleY(1);
+        }
+        65%{
+            transform: scaleX(1.09) scaleY(0.85);
+        }
+        75%{
+            transform: scaleX(0.9)  scaleY(1);
+        }
+        90%{
+            transform: scaleX(1.05) scaleY(0.95);
+        }
+        100%{
+            transform: scaleX(1) scaleY(1);
+        }
+    }
+   
