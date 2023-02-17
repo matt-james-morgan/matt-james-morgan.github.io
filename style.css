@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Aboreto', serif;
+    background-color: #212121;
 }
 body{
     display: flex;
@@ -15,6 +16,7 @@ body{
      position: relative;
      min-height: 100vh;
      width: 8%;
+     z-index: 5;
  }
  .sidebar .menu-title:hover{
     color: #FFC300;
@@ -30,7 +32,7 @@ body{
     font-size: 2rem;
     color: white;
     width: 100%;
-    background-color: #5463FF;
+    border-right: 2px yellow solid;
     transition: all 0.8s linear;
 }
 
@@ -43,8 +45,9 @@ body{
     left: -300px;
     transition: all 0.8s linear;
     height: 100vh;
-    background-color: #5463FF;
+    background-color: #212121;
 }
+
 .menu button{
     color:#FFC300;
     transform: rotate(45deg);
@@ -54,7 +57,6 @@ body{
     left: 70%;
     position: relative;
     border-radius: 50%;
-    
 }
 #menu-button-ham{
     display: none;
@@ -71,6 +73,7 @@ body{
     transition: 0.2s linear;
     font-weight: bolder;
     left: -30%;
+    background-color: #212121;
 }
 .menu ul li:hover{
     color: #FFC300;
@@ -117,19 +120,47 @@ body{
         display: none;
     }
 }
+
+/*Main page styling*/
+main{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
     
     /*title styling*/
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #212121;
+}
 header span{
-        font-size: 15rem;
+        font-size: 3rem;
         display: flex;
+        font-weight: bolder;
+}
+header .red{
+    color: #FFC300;
+}
+header .blue{
+    color: #FFC300;
+}
+header .yellow{
+    color:#FFC300;
+}
+header .dot{
+    height:0.5rem;
+    width:0.5rem;
+    background-color: white;
+    border-radius: 50%;
+
 }
 span:hover{
     animation-name: rubberband;
     animation : rubberband 800ms alternate ease-out;
 }
-    .bouncing{
-       
-    }
 
     @keyframes rubberband{
         0%{
@@ -154,4 +185,73 @@ span:hover{
             transform: scaleX(1) scaleY(1);
         }
     }
+
+    .info{
+        display: grid;
+        place-items: center;
+        width: 100%;
+        grid-template-columns:repeat(3, 1fr) ;
+    }
+/*Styling bio section*/
+.bio p{
+    color: white;
+}
+/*Projects Styling Flip Cards*/
+
+.flip-card-front img{
+    height: 20rem;
+    box-shadow: -50px -50px 0px -40px #FFC300, 50px 50px 0px -40px #FFC300;
+}
+.flip-card-back img{
+    height: 20rem;
+    box-shadow: -50px -50px 0px -40px #FFC300, 50px 50px 0px -40px #FFC300;*/
+}
+.flip-card {
+    
+    background-color: transparent;
+    width: 12rem;
+    height: 20rem;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    
+    
+    
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+   backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: #212121;
+    color: white;
+    transform: rotateY(180deg);
+  }
    
