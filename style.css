@@ -10,6 +10,17 @@
 body{
     display: flex;
     background-color: white;
+    position: relative;
+}
+.cursor{
+    height:20px;
+    width: 20px;
+    border: #FFC300 solid 1px;
+    border-radius: 50%;
+    z-index: 10;
+
+    position: absolute;
+    transition: all 0.4s ease-in-out;
 }
 /*sidebar menu stlying*/
 .sidebar{
