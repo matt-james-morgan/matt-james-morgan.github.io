@@ -44,9 +44,9 @@ menuCloseHam.addEventListener('click', ()=>{
         hamMenu.style.left ='-5%';
 });
 
-document.addEventListener('mouseover', function(e){
-    cursor.style.top = e.pageY;
-    cursor.style.left = e.pageX;
+document.body.addEventListener('mousemove', function(e){
+    cursor.style.top = e.pageY +'px';
+    cursor.style.left = e.pageX + 'px';
 });
 
 
