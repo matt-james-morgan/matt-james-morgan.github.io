@@ -9,7 +9,7 @@
 }
 body{
     display: flex;
-    background-color: white;
+    background-color: #212121;
     position: relative;
 }
 .cursor{
@@ -31,6 +31,7 @@ body{
      min-height: 100vh;
      width: 8%;
      z-index: 5;
+     border-right: 2px #FFC300 solid;
  }
  .sidebar .menu-title:hover{
     color: #FFC300;
@@ -46,7 +47,7 @@ body{
     font-size: 2rem;
     color: white;
     width: 100%;
-    border-right: 2px #FFC300 solid;
+   
     transition: all 0.8s linear;
 }
 
@@ -100,25 +101,25 @@ body{
     display: none;
 }
 @media only screen and (max-width: 1082px){
+    
     .menu-title{
         display:none;
     }
     .sidebar{
        background-color: transparent;
-      
+      border: none;
     }
     .ham-menu{
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        background-color: #5463FF;
+        background-color: transparent;
         border-radius: 100%;
-        height: 4rem;
+        height: 25%;
         width: 4rem;
         position: relative;
-        margin-top: 5%;
-        left: -5%;
+    
         transition: all 0.5s linear;
     }
     .ham-menu span{
@@ -169,7 +170,7 @@ header .dot{
     border-radius: 50%;
 
 }
-span:hover{
+.bouncy:hover{
     animation-name: rubberband;
     animation : rubberband 800ms alternate ease-out;
 }
@@ -197,16 +198,24 @@ span:hover{
             transform: scaleX(1) scaleY(1);
         }
     }
-
-    .info{
-        display: grid;
-        place-items: center;
-        width: 100%;
-        grid-template-columns:repeat(2, 1fr) ;
+@media only screen and (max-width:1082px){
+    header{
+        height: 25%;
     }
+    header span{
+        font-size: 1.5rem;
+    }
+}
+
+.info{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
 /*Styling bio section*/
 .bio{
-    width: 100%;
+    width: 50%;
 }
 .bio p{
     color: white;
@@ -214,8 +223,23 @@ span:hover{
     margin-left: 5%;
     line-height: 3rem;
 }
+@media only screen and (max-width:1082px){
+    .info{
+       align-items: center;
+       justify-content: center;
+    }
+    .bio{
+        width: 75%;
+    }
+    .bio p{
+        font-size:1.2rem;
+    }
+}
 /*Projects Styling Flip Cards*/
-
+.img-wrap{
+    width: 10rem;
+    margin: 4rem;
+}
 .flip-card-front img{
     height: 20rem;
     box-shadow: -50px -50px 0px -40px #FFC300, 50px 50px 0px -40px #FFC300;
@@ -225,9 +249,9 @@ span:hover{
     box-shadow: -50px -50px 0px -40px #FFC300, 50px 50px 0px -40px #FFC300;*/
 }
 .flip-card {
-    
+    margin: auto 0;
     background-color: transparent;
-    width: 12rem;
+    width: 13rem;
     height: 20rem;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }

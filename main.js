@@ -36,12 +36,12 @@ hamMenu.addEventListener('mouseout', ()=>{
 //On click pulls out side menu in tablet view
 hamMenu.addEventListener('click',()=>{
     menu.style.left = '0px';
-    hamMenu.style.left = '-20%';
+    hamMenu.style.left = '-100%';
 });
 
 menuCloseHam.addEventListener('click', ()=>{
         document.getElementById('menu').style.left = '-300px'; 
-        hamMenu.style.left ='-5%';
+        hamMenu.style.left = "0";
 });
 
 document.body.addEventListener('mousemove', function(e){
